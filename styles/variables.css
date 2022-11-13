@@ -1,0 +1,39 @@
+:root {
+	/* units */
+	--container-width: 1140px;
+
+	/* fonts */
+	--font-family-sans-serif: 'Raleway', sans-serif;
+
+	--font-extra-light: 200;
+	--font-light: 300;
+	--font-regular: 400;
+	--font-bold: 700;
+
+	/* colors */
+	--theme-color: #9b59b6;
+
+	--bgOpacity: #ffffff7f;
+	--bgBlack900: #000000;
+	--bgBlack100: #dddddd;
+	--bgBlack50: #eff0f4;
+
+	--whiteFontColor: #f1f1f1;
+
+	--blackFontColor: #1a1a1a;
+	--black900FontColor: #000000;
+	--black700FontColor: #555555;
+	--black600FontColor: #666666;
+	--black300FontColor: #bbbbbb;
+
+	/* box shadow colors */
+	--whiteBoxShadowColor: #f8f8f8;
+	--grayBoxShadowColor: #d0d0d0;
+
+	/* box shadows */
+	--outerShadow: 0.3rem 0.3rem 0.3rem var(--grayBoxShadowColor), -0.3rem -0.3rem 0.3rem var(--whiteBoxShadowColor);
+	--outerShadow0: 0 0 0 var(--grayBoxShadowColor), 0 0 0 var(--whiteBoxShadowColor);
+	--innerShadow: inset 0.3rem 0.3rem 0.3rem var(--grayBoxShadowColor),
+		inset -0.3rem -0.3rem 0.3rem var(--whiteBoxShadowColor);
+	--innerShadow0: inset 0 0 0 var(--grayBoxShadowColor), inset 0 0 0 var(--whiteBoxShadowColor);
+}

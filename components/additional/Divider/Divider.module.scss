@@ -1,0 +1,54 @@
+.divider {
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+.small {
+	margin: 1rem 0;
+}
+
+.medium {
+	margin: 2rem 0;
+}
+
+.large {
+	margin: 3rem 0;
+}
+
+.veryBig {
+	margin: 5rem 0;
+}
+
+.black {
+	background: rgb(var(--black));
+}
+.gray {
+	background: rgb(var(--light-gray));
+}
+.transparentGray {
+	background: rgba(var(--black), 0.4);
+}
+.white {
+	background: rgb(var(--white));
+}
+.blue {
+	background: rgb(var(--blue));
+}
+.orange {
+	background: rgb(var(--orange));
+}
+.red {
+	background: rgb(var(--red));
+}
+
+.px1 {
+	height: 0.1rem;
+}
+
+.px2 {
+	height: 0.2rem;
+}
+
+.px3 {
+	height: 0.3rem;
+}

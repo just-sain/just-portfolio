@@ -1,0 +1,50 @@
+.wrapper {
+	height: 100vh;
+
+	background: var(--bgBlack50);
+	color: var(--blackFontColor);
+}
+
+.dark {
+	// colors
+	--whiteFontColor: #1a1a1a;
+
+	--blackFontColor: #f1f1f1;
+	--black900FontColor: #ffffff;
+	--black700FontColor: #ffffff;
+	--black600FontColor: #bbbbbb;
+	--black300FontColor: #bbbbbb;
+
+	--bgOpacity: #2b2c2f7f;
+	--bgBlack900: #ffffff;
+	--bgBlack100: #353535;
+	--bgBlack50: #2b2c2f;
+
+	// box shadows
+	--outerShadow: 0.3rem 0.3rem 0.3rem #222327, -0.3rem -0.3rem 0.3rem #363636;
+	--outerShadow0: 0 0 0 #222327, 0 0 0 #363636;
+	--innerShadow: inset 0.3rem 0.3rem 0.3rem #222327, inset -0.3rem -0.3rem 0.3rem #222327;
+	--innerShadow0: inset 0 0 0 #222327, inset 0 0 0 #363636;
+}
+
+.color1 {
+	--theme-color: #9b59b6;
+}
+.color2 {
+	--theme-color: #fb839e;
+}
+.color3 {
+	--theme-color: #ea2027;
+}
+.color4 {
+	--theme-color: #ffa500;
+}
+.color5 {
+	--theme-color: #f1c40f;
+}
+.color6 {
+	--theme-color: #2ed573;
+}
+.color7 {
+	--theme-color: #2eb1ed;
+}

@@ -1,0 +1,217 @@
+.nav-menu {
+	width: 100%;
+	height: 100%;
+	overflow: hidden auto;
+	z-index: 999;
+	opacity: 1;
+
+	background-color: var(--bgBlack50);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.nav-menu._open {
+	-webkit-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
+	transition: 0.3s ease-in;
+}
+
+.nav-menu__close {
+	width: 4rem;
+	height: 4rem;
+	cursor: pointer;
+	display: block;
+	border-radius: 50%;
+	color: var(--blackFontColor);
+	text-align: center;
+	line-height: 3.5rem;
+	font-size: 3.5rem;
+	position: absolute;
+	top: 2.5rem;
+	right: 1.5rem;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.nav-menu__close::after {
+	border-radius: 50%;
+}
+
+.nav-menu__inner {
+	width: 100%;
+	min-height: 95vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.nav-menu__inner ul {
+	padding: 1.5rem;
+}
+
+.nav-menu__inner ul:hover li a {
+	opacity: 0;
+}
+
+.nav-menu__inner ul li {
+	display: block;
+	margin-bottom: 3.5rem;
+	text-align: center;
+}
+
+.nav-menu__inner ul li:last-child {
+	margin-bottom: 0;
+}
+
+.nav-menu__inner ul li::before {
+	content: attr(data-text);
+	opacity: 0;
+	pointer-events: none;
+	color: var(--theme-color);
+	text-transform: uppercase;
+	letter-spacing: 2rem;
+	white-space: nowrap;
+	font-size: 15vw;
+	font-weight: 700;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.nav-menu__inner ul li:hover::before {
+	opacity: 0.3;
+	letter-spacing: 0;
+}
+
+.nav-menu__inner ul li a {
+	padding: 0.5rem 3rem;
+	overflow: hidden;
+	display: inline-block;
+	color: var(--blackFontColor);
+	text-transform: capitalize;
+	font-size: 2.8rem;
+	font-weight: 700;
+	position: relative;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.nav-menu__inner ul li a._active {
+	color: var(--theme-color);
+}
+
+.nav-menu__inner ul li a._active:hover {
+	color: var(--whiteFontColor);
+}
+
+.nav-menu__inner ul li a:hover {
+	z-index: 1000;
+	opacity: 1;
+	background: var(--theme-color);
+	color: var(--whiteFontColor);
+	-webkit-transform: scale(1.4);
+	-ms-transform: scale(1.4);
+	transform: scale(1.4);
+}
+
+.nav-menu__inner ul li a:hover::before {
+	left: calc(100% + 10rem);
+	-webkit-transition: 0.5s 0.2s;
+	-o-transition: 0.5s 0.2s;
+	transition: 0.5s 0.2s;
+}
+
+.nav-menu__inner ul li a::before {
+	content: '';
+	width: 8rem;
+	height: 100%;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(transparent),
+		color-stop(rgba(255, 255, 255, 0.8)),
+		to(transparent)
+	);
+	background: -o-linear-gradient(left, transparent, rgba(255, 255, 255, 0.8), transparent);
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+	position: absolute;
+	top: 0;
+	left: -10rem;
+	-webkit-transform: skewX(35deg);
+	-ms-transform: skewX(35deg);
+	transform: skewX(35deg);
+	-webkit-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+.nav-menu__copyright-text {
+	color: var(--black600FontColor);
+	text-transform: lowercase;
+	-webkit-writing-mode: vertical-lr;
+	-ms-writing-mode: tb-lr;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	letter-spacing: -0.4rem;
+	font-size: 1.8rem;
+	font-weight: 500;
+	position: absolute;
+	top: 50%;
+	left: 2.5rem;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.fade-out-effect {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	visibility: hidden;
+	background: var(--bgBlack50);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.fade-out-effect._active {
+	z-index: 1001;
+	visibility: visible;
+	-webkit-animation: 0.3s ease-out fadeOut;
+	animation: 0.3s ease-out fadeOut;
+}
